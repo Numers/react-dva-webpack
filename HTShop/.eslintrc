@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "enough",
+    "./.eslintrc.json"
+  ]
+}
