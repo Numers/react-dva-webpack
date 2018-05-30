@@ -8,6 +8,7 @@ function RouterConfig({ history }) {
   const IndexPage1 = ({ match }) => (
     <div>
       <Route path={`${match.url}/:userId`} component={IndexPage}/>
+      <Route path={`${match.url}/login`} component={LoginPage}/>
     </div>
   )
   return (
