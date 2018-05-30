@@ -5,12 +5,17 @@ import LoginPage from './routes/login';
 import App from './routes/App';
 
 function RouterConfig({ history }) {
+  const IndexPage1 = ({ match }) => (
+    <div>
+      <Route path={`${match.url}/:userId`} component={IndexPage}/>
+    </div>
+  )
   return (
     <Router history={history}>
       <Switch>
         <App>
           <Route path="/" exact={true}  component={IndexPage}></Route>
-          <Route path="/indexPage" exact={true}  component={IndexPage}></Route>
+          <Route path="/indexPage"   component={IndexPage1}></Route>
           <Route path="/login" exact={true} component={LoginPage}></Route>
         </App>
       </Switch>
