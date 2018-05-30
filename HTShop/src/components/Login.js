@@ -4,7 +4,6 @@ import {Button, WingBlank} from 'antd-mobile';
 class Login extends React.Component{
   clickBtn(e)
   {
-    console.log("click btn1");
     this.props.back();
   }
   render(){

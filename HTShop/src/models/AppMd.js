@@ -12,7 +12,6 @@ export default {
   },
   reducers: {
     setCurAnimate(state, action) {
-      console.log(action.curAnimate);
       //动态修改当前动画参数  要么是left 要么是right
       return { ...state, animateCls:action.curAnimate};
     }

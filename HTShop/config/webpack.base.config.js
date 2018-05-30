@@ -5,10 +5,11 @@ module.exports = {
   devtool: '#source-map',
   entry: [
     './src/index.js',
+    'babel-polyfill'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'build.js',
+    filename: 'build.js?[hash]',
     publicPath: '/dist/'
   },
   plugins: [
@@ -18,7 +19,7 @@ module.exports = {
   "devServer": {
     "port": 8080,
     "historyApiFallback": {
-      index: '/build/'
+      index: '/dist/'
     },
     // "proxy": {
     //     '/factor': {

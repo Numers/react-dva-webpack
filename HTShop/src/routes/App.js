@@ -18,14 +18,14 @@ class App extends Component {
   }
 
   render() {
-    console.log('开始切换',this.props);
+    console.log(this.props);
+    let {animateCls}=this.props.AppMd.AppMd;
     return (
       <ReactCSSTransitionGroup
-        transitionName="transitionWrapper"
+        transitionName={animateCls}
         component="div"
-        className={style.transitionWrapper}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}>
+        transitionEnterTimeout={400}
+        transitionLeaveTimeout={400}>
         <div key={this.props.location.pathname}
              style={{position:"absolute", width: "100%"}}>
           {
@@ -36,5 +36,6 @@ class App extends Component {
     );
   }
 }
+
 // 利用connect将组件与Redux绑定起来
 export default connect((AppMd) => ({AppMd}))(App)
