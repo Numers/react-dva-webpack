@@ -22,11 +22,12 @@ module.exports = merge(baseWebpackConfig, {
         test: /\.scss|\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
+          use: ['css-loader', 'sass-loader', 'postcss-loader']
         })
       }
     ]
   },
+
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
