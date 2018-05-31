@@ -1,4 +1,4 @@
-
+import * as exampleService from  '../services/example';
 export default {
 
   namespace: 'example',
@@ -19,6 +19,7 @@ export default {
 
     *add({ payload }, { call, put, select }){
       console.log("click btn2");
+      exampleService.queryMemberInfo();
       yield put(
         {
           type:'addone',

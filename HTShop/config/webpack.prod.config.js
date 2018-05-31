@@ -41,7 +41,7 @@ module.exports = merge(baseWebpackConfig, {
       //     这样我们就实现了chunk文件名和代码的分离. 这样修改一个js文件不会导致其他js文件在打包时发生改变, 只有manifest.js会改变.
 
     }),
-    new ExtractTextPlugin('[name].css?[chunkhash]',{allChunks: true}),//将css从style里抽离出
+    new ExtractTextPlugin('[name].css?[chunkhash]', {allChunks: true}), //将css从style里抽离出
     new webpack.optimize.UglifyJsPlugin({//丑化代码
       mangle: true,
       compress: {

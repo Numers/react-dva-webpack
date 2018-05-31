@@ -10,6 +10,15 @@ const IndexPage = ({location, dispatch, example}) => {
 
     add(){
       dispatch({
+        type:"example/add",
+        payload:{
+
+        }
+      });
+    },
+
+    pushToLogin(){
+      dispatch({
         type: 'AppMd/setCurAnimate',
         curAnimate:'left'
       });

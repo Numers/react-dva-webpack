@@ -21,24 +21,15 @@ module.exports = {
     "historyApiFallback": {
       index: '/dist/'
     },
-    // "proxy": {
-    //     '/factor': {
-    //         target: 'http://test-factor-api.glp.zmq.cc/factor',
-    //         secure: false
-    //     },
-    //     '/user': {
-    //         target: 'http://test-member.glp.zmq.cc/user/',
-    //         secure: false
-    //     },
-    //     '/manage': {
-    //         target: 'http://test-manage.glp.zmq.cc/manage',
-    //         secure: false
-    //     },
-    //     '/api': {
-    //         target: 'http://172.16.6.29:8080/api',
-    //         secure: false
-    //     }
-    // }
+    proxy: {
+      '/proxy': {
+        target: 'http://news.163.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/proxy': ''
+        }
+      }
+    }
   },
   resolve: {
     extensions: ['.js', '.jsx']

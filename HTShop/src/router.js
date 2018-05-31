@@ -16,7 +16,7 @@ function RouterConfig({ history }) {
       <Switch>
         <App>
           <Route path="/" exact={true}  component={IndexPage}></Route>
-          <Route path="/indexPage"   component={IndexPage1}></Route>
+          <Route path="/indexPage"  component={IndexPage1}></Route>
           <Route path="/login" exact={true} component={LoginPage}></Route>
         </App>
       </Switch>
